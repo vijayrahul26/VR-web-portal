@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+ <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/notification.css" rel="stylesheet">
+</head>
+<body>
+<b>The BlogPost titled "{{notification.blogTitle}}"</b> is {{notification.approvalStatus}}
+<span ng-show="notification.approvalStatus=='Rejected'">for the reason {{notification.rejectionReason}}</span>
+</body>
+</html>

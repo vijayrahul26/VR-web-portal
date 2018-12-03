@@ -1,0 +1,15 @@
+<span style="color:red">{{error.errorMessage}}</span>
+<div ng-show="user.role!='ADMIN'">Access denied..</div>
+<div ng-show="user.role=='ADMIN'">
+<form>
+Enter Job Title : <input type="text" ng-model="job.jobTitle"><br>
+Enter Job Description : <textarea  ng-model="job.jobDescription"></textarea><br>
+Enter Job Location : <input type="text" ng-model="job.location"><br>
+Enter Salary  : <input type="text" ng-model="job.salary"><br>
+Enter Skills Required  : <input type="text" ng-model="job.skillsRequired"><br>
+Enter Years of Exp  : <input type="text" ng-model="job.yrsOfExp"><br>
+Enter Company name  : <input type="text" ng-model="job.companyName"><br>
+<button class="btn btn-info" ng-click="addJob(job)">Add Job</button>
+</form>
+</div>
+

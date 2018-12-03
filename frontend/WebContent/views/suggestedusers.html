@@ -1,0 +1,19 @@
+
+<div class="container">
+	<div class="panel panel-info">
+		<div class="panel-heading">List of suggested users</div>
+		<div class="panel-body">
+			<ul style="list-style:none">
+             <li ng-repeat="user in suggestedUsers"><!-- Array of User object -->
+             {{user.email}}<br>
+             {{user.role}}<br>
+             {{user.firstname}}&nbsp; {{user.lastname}}<br>
+             <button class="btn btn-info" ng-click="sendFriendRequest(user)">Send Friend Request</button>
+             <!-- onclick loggedin user is sending friend request to 'user' -->
+             <!-- user is the value for toId property in Friend -->
+             <hr>
+             </li>
+			</ul>
+		</div>
+	</div>
+</div>

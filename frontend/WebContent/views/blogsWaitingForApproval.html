@@ -1,0 +1,23 @@
+<span style="color:red" ng-show="user.role!='ADMIN'">Access Denied</span>
+<div class="container" ng-show="user.role=='ADMIN'">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<b>List of Blog's Waiting For Approval</b>
+		</div>
+		<div class="panel-body">
+		<b ng-show="blogsWaitingForApproval.length==0">No blog's waiting for approval </b>
+		<ul style="list-style:none;">
+		<li ng-repeat="blog in  blogsWaitingForApproval">
+		<a href="#/getBlogApprovalForm/{{blog.id}}"><b>Blog Title: </b>{{blog.blogTitle}}</a><br>
+		<b>Posted On:</b>{{blog.postedOn | date:'dd-MM-yyyy'}}<br>
+		<b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp; {{blog.postedBy.lastname}}<!-- firstname and lastname of the user who posted the blog -->
+		<br>
+		<a href="#/getBlogApprovalForm/{{blog.id}}">View more details</a>
+		<hr>
+		</li>
+		</ul>
+		</div>
+	</div>
+</div>
+
+
